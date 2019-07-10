@@ -1,0 +1,72 @@
+.header
+  %nav.green.accent-2
+    .nav-wrapper
+      %a.brand-logo{:href => "#"} BLOG
+      %ul#nav-mobile.right.hide-on-med-and-down
+        %li
+          %a{:href => "sass.html"} 投稿
+        -if user_signed_in?
+          %li
+            = link_to "ログアウト", destroy_user_session_path, class: 'delete'
+        -else
+          %li
+            = link_to "ログイン", new_user_session_path, class: 'post'
+          %li
+            = link_to "新規登録", new_user_registration_path, class: 'post'
+
+
+.contents
+  .articles
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+    .article
+      .card
+        .card-content
+          %p
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+        .card-action
+          %a{:href => "#"} This is a link
+
+
+
+
+
