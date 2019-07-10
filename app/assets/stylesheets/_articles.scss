@@ -52,4 +52,21 @@ html,body {
 
 .card {
   margin:0;
+  .card-content{
+    word-wrap: break-word;
+    overflow: scroll;
+    height: 120px;
+  }
+  .card-info {
+    opacity: 0.5;
+    justify-content: space-between;
+    & p{
+      display: inline-block;
+    }
+    .card-creater{
+      float: right;
+    }
+    
+  }
 }
+
