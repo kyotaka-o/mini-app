@@ -1,0 +1,9 @@
+.contents
+  .form
+    .article
+      .card
+        .card-content.card-content-form
+          = form_for [article],html: {class: 'form__box'} do |f|
+            = f.text_field :title, placeholder: 'type a title'
+            = f.text_area :content, placeholder: 'type a content',class:"materialize-textarea"
+            = f.submit 'Send', class: 'form__box__submit' 
