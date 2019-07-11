@@ -1,13 +1,15 @@
 .header
-  %nav.green.accent-2
+  %nav.orange.darken-3
     .nav-wrapper
       %a.brand-logo{:href => root_path} BLOG
       %ul#nav-mobile.right.hide-on-med-and-down
         -if user_signed_in?
           %li
-            %p ユーザー名 : #{current_user.nickname} 
-          %li
-            = link_to "投稿", new_article_path, method: 'get'
+            = fa_icon "user"
+          %li    
+            = current_user.nickname
+          %li.js-modal-open
+            投稿
           %li
             = link_to "ログアウト", destroy_user_session_path, method: 'DELETE'
         -else

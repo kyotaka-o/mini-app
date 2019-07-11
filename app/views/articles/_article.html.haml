@@ -9,8 +9,11 @@
         %a{:href => "#"} #{article.title}
       -if user_signed_in?
         -if article.user_id == current_user.id
-          = link_to "編集", edit_article_path(article), method: 'get'
-          = link_to "削除", "/articles/#{article.id}", method: 'delete'
+          = link_to edit_article_path(article), method: 'get' do
+            = fa_icon 'edit'
+          = link_to "/articles/#{article.id}", method: 'delete' do
+            = fa_icon 'trash'
+
       .card-info
         %p.card-time
           =article.updated_at.strftime("%Y/%m/%d %H:%M")

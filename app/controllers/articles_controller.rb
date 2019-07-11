@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def index
+    @article = Article.new
     @articles = Article.includes(:user).order("updated_at DESC")
   end
 
