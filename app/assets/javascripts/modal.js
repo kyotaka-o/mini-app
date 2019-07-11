@@ -1,13 +1,21 @@
 $(document).on('turbolinks:load', function() { 
   function buildHTML(article, now){
+
+
     var html = `<div class="article">
-                  <div class="card">
-                    <div class="card-content">
+                  <div class="card">`
+    if(article.image.url !== null){
+      html = html + `<div class="card-image-orgin">
+                      <img class="article-image" src="${article.image.url}">
+                      </div>`
+      }                
+
+    html = html + `<div class="card-content">
                       <p>${article.content}</p>
                     </div>
                     <div class="card-action">`
     if(article.title === ""){
-     html = html + `<a data-method="get" href="/articles/${article.id}">無題</a>`
+      html = html + `<a data-method="get" href="/articles/${article.id}">無題</a>`
     }else{
       html = html + `<a data-method="get" href="/articles/${article.id}">${article.title}</a>`
     }
@@ -70,6 +78,7 @@ $(document).on('turbolinks:load', function() {
       // }, 500);
       $('.title-area').val('')
       $('.materialize-textarea').val('')
+      $('.form__box__input__img').val('')
       $(".form__box__submit").removeAttr("disabled");
       $('.js-modal').fadeOut();
     })

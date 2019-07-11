@@ -5,6 +5,8 @@
       .card
         .content_all
           =simple_format"#{@article.content}"
+          - if @article.image.present?
+            = image_tag "#{@article.image}"
         .card-action
           -if @article.title == ""
             = link_to article_path(@article), method: 'get' do

@@ -1,5 +1,8 @@
 .article
   .card
+    - if article.image.present?
+      .card-image-orgin
+        = image_tag "#{article.image}",class:"article-image"
     .card-content
       =simple_format"#{article.content}"
     .card-action
