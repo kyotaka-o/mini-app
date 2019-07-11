@@ -4,7 +4,6 @@
     = render @articles
 
 .modal.js-modal
-  -# .modal__content
   %a.js-modal-close{:href => ""} 
     = fa_icon 'window-close'
   = render partial: "form", locals: { article: @article }

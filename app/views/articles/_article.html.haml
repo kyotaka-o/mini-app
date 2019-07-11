@@ -1,21 +1,14 @@
 .article
   .card
-    -# .card-image
-    -#   %img{:src => "app/assets/images/_bg.jpg"}/
     .card-content
       =simple_format"#{article.content}"
     .card-action
       -if article.title == ""
-        %a{:href => "#"} 無題
+        = link_to article_path(article), method: 'get' do
+          無題
       -else
-        %a{:href => "#"} #{article.title}
-      -if user_signed_in?
-        -if article.user_id == current_user.id
-          = link_to edit_article_path(article), method: 'get' do
-            = fa_icon 'edit'
-          = link_to "/articles/#{article.id}", method: 'delete' do
-            = fa_icon 'trash'
-
+        = link_to article_path(article), method: 'get' do
+          #{article.title}
       .card-info
         %p.card-time
           =article.updated_at.strftime("%Y/%m/%d %H:%M")

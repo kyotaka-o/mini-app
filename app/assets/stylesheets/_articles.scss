@@ -12,21 +12,13 @@ html,body {
 
 }
 .articles {
-  // height: 300px;
   padding-top: 114px;
 
   
 }
-.user {
-  // font-size: 20px;
-}
 .article {
   width: 600px;
-  // height: 300px;
   margin: 0px auto 30px;
-  // border: 1px solid #8a8787;
-  // left: auto;
-  // right: auto;
 
 }
 .icon {
@@ -97,3 +89,11 @@ html,body {
   color:#32d079;
 }
 
+.article-box {
+  padding-top: 114px;
+}
+.content_all {
+  min-height: 120px;
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}

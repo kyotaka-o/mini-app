@@ -7,23 +7,21 @@ $(document).on('turbolinks:load', function() {
                     </div>
                     <div class="card-action">`
     if(article.title === ""){
-      html = html + `<a href="#">無題</a>`
+     html = html + `<a data-method="get" href="/articles/${article.id}">無題</a>`
     }else{
-      html = html + `<a href="#">${article.title}</a>`
+      html = html + `<a data-method="get" href="/articles/${article.id}">${article.title}</a>`
     }
-    html = html + `<a data-method="get" href="/articles/12/edit"><i class="fa fa-edit"></i>
-            </a><a rel="nofollow" data-method="delete" href="/articles/12"><i class="fa fa-trash"></i>
-            </a><div class="card-info">
-            <p class="card-time">
-            ${now}
-            </p>
-            <p class="card-creater">
-            CreatedBy : ${article.nickname}
-            </p>
-            </div>
-            </div>
-            </div>
-            </div>`
+    html = html + `<div class="card-info">
+                    <p class="card-time">
+                    ${now}
+                    </p>
+                    <p class="card-creater">
+                    CreatedBy : ${article.nickname}
+                    </p>
+                    </div>
+                    </div>
+                    </div>
+                    </div>`
     return html;
   }        
 

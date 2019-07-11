@@ -69,3 +69,6 @@ gem 'haml-rails'
 
 gem 'devise'
 gem "font-awesome-rails"
+
+gem 'carrierwave'
+gem 'mini_magick'
