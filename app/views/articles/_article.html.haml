@@ -1,0 +1,11 @@
+.article
+  .card
+    .card-content
+      =simple_format"#{article.content}"
+    .card-action
+      %a{:href => "#"} #{article.title}
+      .card-info
+        %p.card-time
+          =article.created_at.strftime("%Y/%m/%d %H:%M")
+        %p.card-creater
+          CreatedBy : #{article.user.nickname}

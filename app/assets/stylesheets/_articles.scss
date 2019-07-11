@@ -1,0 +1,72 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html,body {
+  height: 100%;
+ 
+}
+.header{
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+
+}
+.articles {
+  // height: 300px;
+  padding-top: 114px;
+
+  
+}
+.article {
+  width: 600px;
+  // height: 300px;
+  margin: 0px auto 30px;
+  // border: 1px solid #8a8787;
+  // left: auto;
+  // right: auto;
+
+}
+
+.contents {
+  height: 100%;
+  /* 画像ファイルの指定 */
+  background-image: url(bg.jpg);
+ 
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646; 
+  overflow: scroll;
+
+}
+
+.card {
+  margin:0;
+  .card-content{
+    word-wrap: break-word;
+    overflow: scroll;
+    height: 120px;
+  }
+  .card-info {
+    opacity: 0.5;
+    justify-content: space-between;
+    & p{
+      display: inline-block;
+    }
+    .card-creater{
+      float: right;
+    }
+    
+  }
+}
+
