@@ -3,9 +3,16 @@
     .card-content
       =simple_format"#{article.content}"
     .card-action
-      %a{:href => "#"} #{article.title}
+      -if article.title == ""
+        %a{:href => "#"} 無題
+      -else
+        %a{:href => "#"} #{article.title}
+      -if user_signed_in?
+        -if article.user_id == current_user.id
+          = link_to "編集", edit_article_path(article), method: 'get'
+          = link_to "削除", "/articles/#{article.id}", method: 'delete'
       .card-info
         %p.card-time
-          =article.created_at.strftime("%Y/%m/%d %H:%M")
+          =article.updated_at.strftime("%Y/%m/%d %H:%M")
         %p.card-creater
           CreatedBy : #{article.user.nickname}

@@ -1,22 +1,4 @@
-.header
-  %nav.green.accent-2
-    .nav-wrapper
-      %a.brand-logo{:href => root_path} BLOG
-      %ul#nav-mobile.right.hide-on-med-and-down
-        -if user_signed_in?
-          %li
-            %p ユーザー名 : #{current_user.nickname} 
-          %li
-            = link_to "投稿", new_articles_path, method: 'get'
-          %li
-            = link_to "ログアウト", destroy_user_session_path, method: 'DELETE'
-        -else
-          %li
-            = link_to "ログイン", new_user_session_path, method: 'post'
-          %li
-            = link_to "新規登録", new_user_registration_path, method: 'get'
-
-
+= render partial: "header"
 .contents
   .articles
     = render @articles
