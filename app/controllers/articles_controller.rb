@@ -9,11 +9,10 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
-    if @article.save
-      redirect_to root_path
-    else
-      render :new
+    @article = Article.create(article_params)
+    respond_to do |format|
+      format.html
+      format.json
     end
   end
 
