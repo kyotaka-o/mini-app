@@ -1,0 +1,17 @@
+.header
+  %nav.orange.darken-3
+    .nav-wrapper
+      %a.brand-logo{:href => root_path} BLOG
+      %ul#nav-mobile.right.hide-on-med-and-down
+        -if user_signed_in?
+          %li
+            = fa_icon "user"
+          %li    
+            = current_user.nickname
+          %li
+            = link_to "ログアウト", destroy_user_session_path, method: 'DELETE'
+        -else
+          %li
+            = link_to "ログイン", new_user_session_path, method: 'post'
+          %li
+            = link_to "新規登録", new_user_registration_path, method: 'get'
