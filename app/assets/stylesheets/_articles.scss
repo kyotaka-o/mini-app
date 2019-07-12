@@ -48,6 +48,8 @@ html,body {
   /* 背景画像が読み込まれる前に表示される背景のカラー */
   background-color: #464646; 
   animation: bg-color 10s infinite;
+  // background-blend-mode: hard-light;
+  // animation: hue-rotate 3s linear infinite;
   overflow: scroll;
 
 }
@@ -119,7 +121,20 @@ html,body {
   80% { color: #9b59b6; }
   100% { color: #e74c3c; }
 }
-
+// @keyframes hue-rotate {
+//   from {
+//     -webkit-filter: hue-rotate(0);
+//     -moz-filter: hue-rotate(0);
+//     -ms-filter: hue-rotate(0);
+//     filter: hue-rotate(0);
+//   }
+//   to {
+//     -webkit-filter: hue-rotate(360deg);
+//     -moz-filter: hue-rotate(360deg);
+//     -ms-filter: hue-rotate(360deg);
+//     filter: hue-rotate(360deg);
+//   }
+// }
 // @keyframes bg-color2 {
 //   0% { background-color: #e74c3c; }
 //   20% { background-color: #f1c40f; }
