@@ -72,7 +72,7 @@ $(document).on('turbolinks:load', function() {
       //T.B.D
       a=$(".article");
       console.log(a[0].scrollHeight)
-      $(".contents").animate({scrollTop:a[0].scrollHeight-197}, 300, 'swing');
+      $(".contents").animate({scrollTop:0}, 300, 'swing');
       $('.title-area').val('')
       $('.materialize-textarea').val('')
       $('.form__box__input__img').val('')

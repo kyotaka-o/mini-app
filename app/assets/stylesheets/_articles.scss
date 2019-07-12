@@ -121,25 +121,7 @@ html,body {
   80% { color: #9b59b6; }
   100% { color: #e74c3c; }
 }
-// @keyframes hue-rotate {
-//   from {
-//     -webkit-filter: hue-rotate(0);
-//     -moz-filter: hue-rotate(0);
-//     -ms-filter: hue-rotate(0);
-//     filter: hue-rotate(0);
-//   }
-//   to {
-//     -webkit-filter: hue-rotate(360deg);
-//     -moz-filter: hue-rotate(360deg);
-//     -ms-filter: hue-rotate(360deg);
-//     filter: hue-rotate(360deg);
-//   }
-// }
-// @keyframes bg-color2 {
-//   0% { background-color: #e74c3c; }
-//   20% { background-color: #f1c40f; }
-//   40% { background-color: #1abc9c; }
-//   60% { background-color: #3498db; }
-//   80% { background-color: #9b59b6; }
-//   100% { background-color: #e74c3c; }
-// }
+
+.show-img{
+  display: block;
+}
