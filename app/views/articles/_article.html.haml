@@ -4,7 +4,7 @@
       .card-image-orgin
         = image_tag "#{article.image}",class:"article-image"
     .card-content
-      =simple_format"#{article.content}"
+      = safe_join(article.content.split("\n"), tag(:br))
     .card-action
       -if article.title == ""
         = link_to article_path(article), method: 'get' do

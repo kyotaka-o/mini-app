@@ -2,7 +2,7 @@
   .article
     .card
       .content_all
-        =simple_format"#{article.content}"
+        = safe_join(article.content.split("\n"), tag(:br))
         - if article.image.present?
           = image_tag "#{article.image}"
       .card-action

@@ -47,6 +47,7 @@ html,body {
    
   /* 背景画像が読み込まれる前に表示される背景のカラー */
   background-color: #464646; 
+  animation: bg-color 10s infinite;
   overflow: scroll;
 
 }
@@ -105,9 +106,25 @@ html,body {
   display: block;
 
 }
-.card-image-orgin{
-  // text-align: center;
-  //  width: 300px;
-  //  height: 300px;
-
+.brand-logo{
+  // animation: bg-color 10s infinite;
+  // color: #ffffff;
 }
+
+@keyframes bg-color {
+  0% { color: #e74c3c; }
+  20% { color: #f1c40f; }
+  40% { color: #1abc9c; }
+  60% { color: #3498db; }
+  80% { color: #9b59b6; }
+  100% { color: #e74c3c; }
+}
+
+// @keyframes bg-color2 {
+//   0% { background-color: #e74c3c; }
+//   20% { background-color: #f1c40f; }
+//   40% { background-color: #1abc9c; }
+//   60% { background-color: #3498db; }
+//   80% { background-color: #9b59b6; }
+//   100% { background-color: #e74c3c; }
+// }

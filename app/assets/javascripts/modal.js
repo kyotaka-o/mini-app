@@ -11,7 +11,6 @@ $(document).on('turbolinks:load', function() {
       }                
 
     html = html + `<div class="card-content">
-                      <p>${article.content}</p>
                     </div>
                     <div class="card-action">`
     if(article.title === ""){
@@ -69,13 +68,9 @@ $(document).on('turbolinks:load', function() {
       var card = $('.articles');
       var html = buildHTML(article, now);
       card.prepend(html);
-      // $('.articles').animate({scrollTop:0}, 300, 'swing');
-      // var targetTop = $('.articles .article:first').offset().top;
-      card.animate({scrollTop:card[0].scrollHeight}, 300, 'swing');
-      // console.log(targetTop)
-      // $('html,body').animate({
-      //     scrollTop: 500
-      // }, 500);
+      $('.articles .card-content:first').html(article.content.replace(/\r?\n/g, '<br>'));
+      //T.B.D
+      // card.animate({scrollTop:card[0].scrollHeight}, 300, 'swing');
       $('.title-area').val('')
       $('.materialize-textarea').val('')
       $('.form__box__input__img').val('')
