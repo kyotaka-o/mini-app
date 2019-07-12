@@ -70,7 +70,9 @@ $(document).on('turbolinks:load', function() {
       card.prepend(html);
       $('.articles .card-content:first').html(article.content.replace(/\r?\n/g, '<br>'));
       //T.B.D
-      // card.animate({scrollTop:card[0].scrollHeight}, 300, 'swing');
+      a=$(".article");
+      console.log(a[0].scrollHeight)
+      $(".contents").animate({scrollTop:a[0].scrollHeight-197}, 300, 'swing');
       $('.title-area').val('')
       $('.materialize-textarea').val('')
       $('.form__box__input__img').val('')
